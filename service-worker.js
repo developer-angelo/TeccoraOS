@@ -1,4 +1,4 @@
-const CACHE_NAME = 'teccora-os-v1';
+const CACHE_NAME = 'teccora-os-v1.01';
 const urlsToCache = [
   './',
   './index.html',

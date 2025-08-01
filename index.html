@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<title>TeccoraOS</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.14/css/framework7.bundle.min.css">
 	<link rel="icon" href="https://teccora.pages.dev/icon_web.png">
@@ -109,8 +109,14 @@
 		});
 
 		function teccoraPlus() {
-			app.dialog.alert('Visítala ya! En: <a href="https://teccora-studio-plus.pages.dev" target="_blank" class="external">https://teccora-studio-plus.pages.dev</a>', 'TeccoraOS', () => {
+			app.dialog.alert('Visítala ya! En: <a href="https://teccora-studio-plus.pages.dev" target="_blank" class="external">https://teccora-studio-plus.pages.dev</a>', 'Teccora Studio +', () => {
 				console.log('El usuario a obtenido el link de Teccora Studio +')
+			})
+		}
+
+		function teccoraLite() {
+			app.dialog.alert('Visítala ya! En: <a href="https://teccora-studio-lite.pages.dev" target="_blank" class="external">https://teccora-studio-lite.pages.dev</a>', 'Teccora Studio Lite', () => {
+				console.log('El usuario a obtenido el link de Teccora Studio Lite')
 			})
 		}
 
