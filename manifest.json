@@ -1,0 +1,23 @@
+{
+  "name": "TeccoraOS",
+  "short_name": "TeccoraOS",
+  "description": "TeccoraOS, una empresa de software y electrónica, que ofrece los mejores servicios a los usuarios de manera eficiente y de muy buena calidad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b2c49",
+  "theme_color": "#0b2c49",
+  "orientation": "portrait",
+  "lang": "es-PE",
+  "icons": [
+    {
+      "src": "./icon_web.png",
+      "sizes": "1859x1859",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_web.png",
+      "sizes": "1859x1859",
+      "type": "image/png"
+    }
+  ]
+}

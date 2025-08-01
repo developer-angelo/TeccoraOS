@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TeccoraOS</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.14/css/framework7.bundle.min.css">
+	<link rel="icon" href="https://teccora.pages.dev/icon_web.png">
+	<link rel="apple-touch-icon" href="#0b2c49">
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#0b2c49">
+	<style>
+		* {
+			user-select: none;
+			scrollbar-width: none;
+		}
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		.navbar {
+			position: fixed;
+			top: 0;
+			background: linear-gradient(320deg, #300533, #0b2c49);
+			color: white;
+		}
+		.navbar .title {
+    		position: static !important;
+    		transform: none !important;
+    		margin-left: 16px; /* o lo que quieras */
+    		text-align: left;
+  		}
+		.link {
+			color: white !important;
+		}
+		.page-content {
+  			background: url('https://img1.wallspic.com/crops/9/2/2/9/6/169229/169229-estetica_purpura-la_estetica-morado-de_colores-morado_oscuro-1440x2560.jpg');
+  			background-size: cover;
+  			background-position: center;
+  			color: white;
+		}
+		.title {
+			color: goldenrod;
+		}
+		#content {
+			margin-top: 70px;
+		}
+		#cajas {
+			background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+			backdrop-filter: contrast(120%) blur(5px); /* Se verá mejor el efecto */
+			-webkit-backdrop-filter: contrast(120%) blur(5px); /* Compatibilidad Safari */
+			padding: 10px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+			margin-top: 10px;
+		}
+		h4 {
+			background: url('https://e0.pxfuel.com/wallpapers/950/319/desktop-wallpaper-purple-3d-background.jpg');
+			background-size: cover;
+			background-position: center;
+			backdrop-filter: contrast(120%);
+			padding: 10px;
+			border-radius: 10px;
+		}
+		.dialog-inner {
+			background: #0b2c49;
+			color: white;
+		}
+		.dialog-title {
+			color: goldenrod;
+		}
+		.dialog .external {
+			color: lightblue;
+			text-decoration: underline;
+		}
+		.dialog-buttons {
+			background: #0b2c49;
+			color: white !important;
+		}
+		.dialog-buttons span {
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	
+
+	<div id="app">
+		<div class="view view-main view-init" data-url="/">
+			
+		</div>
+	</div>	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/framework7/5.7.14/js/framework7.bundle.min.js"></script>
+	<script>
+		const app = new Framework7({
+			root: '#app',
+			name: 'TeccoraOS',
+			routes: [
+				{
+					path: '/',
+					url: 'home.html',
+				},
+				{
+					path: '/about/',
+					url: 'about.html',
+				},
+			],
+		});
+
+		function teccoraPlus() {
+			app.dialog.alert('Visítala ya! En: <a href="https://teccora-studio-plus.pages.dev" target="_blank" class="external">https://teccora-studio-plus.pages.dev</a>', 'TeccoraOS', () => {
+				console.log('El usuario a obtenido el link de Teccora Studio +')
+			})
+		}
+
+		if ('serviceWorker' in navigator) {
+    		navigator.serviceWorker.register('/service-worker.js')
+      		.then(reg => console.log('✔️ SW registrado', reg))
+      		.catch(err => console.error('❌ Error al registrar SW', err));
+  		}
+	</script>
+</body>
+</html>
