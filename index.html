@@ -105,11 +105,11 @@
    			border-top: 10px solid #09f;
    			animation: spinner 1.4s linear infinite;
 		}
-@keyframes spinner {
-   to {
-      transform: rotate(360deg);
-   }
-}
+		@keyframes spinner {
+   		to {
+      		transform: rotate(360deg);
+   		}
+		}
 	</style>
 </head>
 <body>
@@ -127,9 +127,9 @@
 	</div>	
 	<div class="sheet-modal my-sheet">
 		<div class="sheet-modal-inner">
-			<div style="text-align: center;" class="block">
-				<a onclick="closeMenu()" class="link" style="font-size: 19px;" href="/about/">About</a>
-				<button style="margin-top: 7px;" class="button button-fill" onclick="closeMenu()">Cerrar</button>
+			<div id="menu-modal" class="block">
+				<a onclick="closeMenu()" class="link" style="font-size: 19px; margin-top: 10px;" href="/about/">About</a>
+				<button style="margin-top: 15px;" class="button button-fill" onclick="closeMenu()">Cerrar</button>
 			</div>
 		</div>
 	</div>
@@ -159,13 +159,13 @@
 		});
 
 		function teccoraPlus() {
-			app.dialog.alert('Visítala ya! En: <a href="https://teccora-studio-plus.pages.dev" target="_blank" class="external">https://teccora-studio-plus.pages.dev</a>', 'Teccora Studio +', () => {
+			app.dialog.alert('Visítala ya! En: <span style="user-select: text">https://teccora-studio-plus.pages.dev</span>', 'Teccora Studio +', () => {
 				console.log('El usuario a obtenido el link de Teccora Studio +')
 			})
 		}
 
 		function teccoraLite() {
-			app.dialog.alert('Visítala ya! En: <a href="https://teccora-studio-lite.pages.dev" target="_blank" class="external">https://teccora-studio-lite.pages.dev</a>', 'Teccora Studio Lite', () => {
+			app.dialog.alert('Visítala ya! En: <span style="user-select: text">https://teccora-studio-lite.pages.dev</span>', 'Teccora Studio Lite', () => {
 				console.log('El usuario a obtenido el link de Teccora Studio Lite')
 			})
 		}
